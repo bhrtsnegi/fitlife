@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Signup = () => {
-  // use state for data storage
+  // use state for data storage, error detection, and loading on button
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -31,8 +31,8 @@ export const Signup = () => {
         return setErrorMessage(data.message);
       }
       setLoading(false);
-      if(res.ok){
-        navigate('/sign-in');
+      if (res.ok) {
+        navigate("/sign-in");
       }
     } catch (error) {
       setErrorMessage(error.message);
