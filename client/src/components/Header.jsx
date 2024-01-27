@@ -34,20 +34,22 @@ export const Header = () => {
           <FaMoon />
         </Button>
         <Link to="sign-in">
-          <Button color="purple">Sign In</Button>
+          <Button color="purple" outline>
+            Sign In
+          </Button>
         </Link>
         <Navbar.Toggle />
       </div>
 
       {/* Collapse Nav bar with links */}
       <Navbar.Collapse>
-        <Navbar.Link active={path === "/"} as={'div'}>
+        <Navbar.Link active={path === "/"} as={"div"}>
           <Link to="/">Home</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === "/about"} as={'div'}>
+        <Navbar.Link active={path === "/about"} as={"div"}>
           <Link to="/about">About</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === "/message"} as={'div'}>
+        <Navbar.Link active={path === "/message"} as={"div"}>
           <Link to="/message">Message</Link>
         </Navbar.Link>
       </Navbar.Collapse>
