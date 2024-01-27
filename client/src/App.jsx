@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signin } from "./pages/Signin";
 import { About } from "./pages/About";
 import { Homepage } from "./pages/Homepage";
@@ -7,6 +7,7 @@ import { Signup } from "./pages/Signup";
 import { Message } from "./pages/Message";
 import { Dashboard } from "./pages/Dashboard";
 import { Header } from "./components/Header";
+import { FooterComp } from "./components/FooterComp";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/message" element={<Message />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+      <FooterComp />
     </BrowserRouter>
   );
 };
