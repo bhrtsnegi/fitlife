@@ -5,7 +5,7 @@ import { About } from "./pages/About";
 import { Homepage } from "./pages/Homepage";
 import { Signup } from "./pages/Signup";
 import { Message } from "./pages/Message";
-import { Dashboard } from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import { Header } from "./components/Header";
 import { FooterComp } from "./components/FooterComp";
 import PrivateRoute from "./components/PrivateRoute";
@@ -19,10 +19,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/message" element={<Message />} />
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
+        <Route path="/message" element={<Message />} />
       </Routes>
       <FooterComp />
     </BrowserRouter>

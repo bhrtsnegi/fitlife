@@ -2,13 +2,17 @@ import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signInSuccess, signInStart, signInFailure } from "../redux/user/userSlice";
+import {
+  signInSuccess,
+  signInStart,
+  signInFailure,
+} from "../redux/user/userSlice";
 import OAuth from "../components/OAuth";
 
 export const Signin = () => {
   // use state for data storage, error detection, and loading on button
   const [formData, setFormData] = useState({});
-  const {loading, error: errorMessage} = useSelector(state => state.user);
+  const { loading, error: errorMessage } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -19,7 +23,7 @@ export const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.password || !formData.email) {
-      return dispatch(signInFailure('Please fill out all the fields'));
+      return dispatch(signInFailure("Please fill out all the fields"));
     }
     try {
       dispatch(signInStart());
@@ -74,7 +78,7 @@ export const Signin = () => {
               />
             </div>
             <Button
-              gradientDuoTone="purpleToPink"
+              gradientDuoTone="greenToBlue"
               type="submit"
               disabled={loading}
             >

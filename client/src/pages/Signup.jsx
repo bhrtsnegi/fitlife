@@ -83,7 +83,7 @@ export const Signup = () => {
               />
             </div>
             <Button
-              gradientDuoTone="purpleToPink"
+              gradientDuoTone="greenToBlue"
               type="submit"
               disabled={loading}
             >
