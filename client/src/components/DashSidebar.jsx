@@ -14,10 +14,10 @@ export default function DashSidebar() {
     }
   }, [location.search]);
   return (
-    <Sidebar>
+    <Sidebar className="w-full">
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-          <Link to="/dasboard?tab=profile">
+          <Link to="/dashboard?tab=profile">
             <Sidebar.Item
               active={tab === "profile"}
               icon={HiUser}
