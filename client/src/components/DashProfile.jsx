@@ -85,7 +85,7 @@ export default function DashProfile() {
     e.preventDefault();
     setupdateUserSuccess(null);
     setUpdateUserError(null);
-    if (Object.key(formData).length === 0) {
+    if (Object.keys(formData).length === 0) {
       setUpdateUserError("No changes made");
       return;
     }
@@ -95,7 +95,7 @@ export default function DashProfile() {
     }
     try {
       dispatch(updateStart());
-      const res = await fetch(`api/user/update/{currentUser._id}`, {
+      const res = await fetch(`api/user/update/${currentUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -194,17 +194,18 @@ export default function DashProfile() {
           <span className="cursor-pointer">Delete Account</span>
           <span className="cursor-pointer">Sign Out</span>
         </div>
+
+        {updateUserSuccess && (
+          <Alert color="success" className="mt-5">
+            {updateUserSuccess}
+          </Alert>
+        )}
+        {updateUserError && (
+          <Alert color="failure" className="mt-5">
+            {updateUserError}
+          </Alert>
+        )}
       </div>
-      {updateUserSuccess && (
-        <Alert color="success" className="mt-5">
-          {updateUserSuccess}
-        </Alert>
-      )}
-      {updateUserError && (
-        <Alert color="failure" className="mt-5">
-          {updateUserError}
-        </Alert>
-      )}
     </div>
   );
 }
