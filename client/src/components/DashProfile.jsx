@@ -16,7 +16,7 @@ import {
   updateFailure,
   deleteUserStart,
   deleteUserSuccess,
-  deleteUserFailure,,
+  deleteUserFailure,
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
@@ -231,7 +231,6 @@ export default function DashProfile() {
             {updateUserError}
           </Alert>
         )}
-
         {error && (
           <Alert color="failure" className="mt-5">
             {error}
