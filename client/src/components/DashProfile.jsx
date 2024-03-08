@@ -125,20 +125,20 @@ export default function DashProfile() {
     setShowModal(false);
     try {
       dispatch(deleteUserStart());
-      const res = await fetch('/api/user/delete/${currentUser._id}}', {
-        method: 'DELETE',
+      const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+        method: "DELETE",
       });
       const data = await res.json();
-      if(!res.ok) {
+      if (!res.ok) {
         dispatch(deleteUserFailure(data.message));
-      }
-      else{
+      } else {
         dispatch(deleteUserSuccess(data));
       }
     } catch (error) {
       dispatch(deleteUserFailure(error.message));
     }
   };
+
   return (
     <div className="flex justify-center items-center w-screen">
       <div className="max-w-lg p-3 w-screen">
@@ -247,7 +247,7 @@ export default function DashProfile() {
             <div className="text-center">
               <HiOutlineExclamationCircle className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto" />
               <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
-                Are you sure you want to delete your account?{" "}
+                Are you sure you want to delete your account?
               </h3>
               <div className="flex justify-center gap-4">
                 <Button color="failure" onClick={handleDeleteUser}>
