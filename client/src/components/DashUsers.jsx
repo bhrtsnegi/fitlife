@@ -2,7 +2,7 @@ import { Modal, Table, Button } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-import {FaCheck, FaTimes } from 'react-icons/fa';
+import { FaCheck, FaTimes } from "react-icons/fa";
 
 export default function DashUsers() {
   const { currentUser } = useSelector((state) => state.user);
@@ -47,7 +47,20 @@ export default function DashUsers() {
   };
 
   const handleDeleteUser = async () => {
-    return;
+    try {
+      const res = await fetch(`/api/user/delete/${userIdToDelete}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setUsers((prev) => prev.filter((user) => user.id != userIdToDelete));
+        setShowModal(false);
+      } else {
+        console.log(error);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -79,7 +92,11 @@ export default function DashUsers() {
                   <Table.Cell>{user.username}</Table.Cell>
                   <Table.Cell>{user.email}</Table.Cell>
                   <Table.Cell>
-                    {user.isAdmin ? <FaCheck className="text-green-500"/> : <FaTimes className = 'text-red-500'/>}
+                    {user.isAdmin ? (
+                      <FaCheck className="text-green-500" />
+                    ) : (
+                      <FaTimes className="text-red-500" />
+                    )}
                   </Table.Cell>
                   <Table.Cell>
                     <span
