@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signin } from "./pages/Signin";
 import { About } from "./pages/About";
-import { Homepage } from "./pages/Homepage";
 import { Signup } from "./pages/Signup";
 import { Message } from "./pages/Message";
 import Dashboard from "./pages/Dashboard";
@@ -14,6 +13,7 @@ import { CreatePost } from "./pages/CreatePost";
 import { UpdatePost } from "./pages/UpdatePost";
 import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
   return (
