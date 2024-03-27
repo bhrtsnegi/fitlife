@@ -63,6 +63,7 @@ export default function Header() {
           rightIcon={AiOutlineSearch}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          className="text-sm w-full max-w-xs"
         />
       </form>
       <div className="flex gap-2 md:order-2">
