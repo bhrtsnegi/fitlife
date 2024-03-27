@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signin } from "./pages/Signin";
 import { Signup } from "./pages/Signup";
-import { Message } from "./pages/Message";
 import Dashboard from "./pages/Dashboard";
 import { FooterComp } from "./components/FooterComp";
 import PrivateRoute from "./components/PrivateRoute";
@@ -15,6 +14,7 @@ import Homepage from "./pages/Homepage";
 import Search from "./pages/Search";
 import Header from "./components/Header";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 const App = () => {
   return (
@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:postId" element={<UpdatePost />} />
         </Route>
-        <Route path="/message" element={<Message />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/post/:postSlug" element={<PostPage />} />
       </Routes>
       <FooterComp />

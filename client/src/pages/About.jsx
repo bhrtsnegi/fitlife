@@ -8,26 +8,28 @@ import {
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-extrabold text-gray-900">About Me</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+          About Me
+        </h1>
         <div className="flex items-center mt-4 gap-4">
           <img
             src="/src/assets/images/mainpic.jpg"
             alt="Gaurav Negi"
             className="w-48 h-48"
           />
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-white">
             Welcome to my fitness journey!
           </p>
         </div>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Instagram */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300">
-            <FaInstagram className="text-4xl text-pink-600 mr-4" />
+          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300 dark:bg-slate-600">
+            <FaInstagram className="text-4xl text-pink-600 mr-4 dark:text-white" />
             <div>
               <h2 className="text-xl font-bold mb-2">Instagram</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-white">
                 Follow me on Instagram for daily fitness inspiration!
               </p>
               <a
@@ -42,11 +44,11 @@ const About = () => {
             </div>
           </div>
           {/* LinkedIn */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300">
-            <FaLinkedin className="text-4xl text-blue-600 mr-4" />
+          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300 dark:bg-slate-600">
+            <FaLinkedin className="text-4xl text-blue-600 mr-4 dark:text-white" />
             <div>
               <h2 className="text-xl font-bold mb-2">LinkedIn</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-white">
                 Connect with me on LinkedIn for professional networking.
               </p>
               <a
@@ -61,11 +63,11 @@ const About = () => {
             </div>
           </div>
           {/* Personal Portfolio */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300">
-            <FaExternalLinkAlt className="text-4xl text-purple-600 mr-4" />
+          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300 dark:bg-slate-600">
+            <FaExternalLinkAlt className="text-4xl text-purple-600 mr-4 dark:text-white" />
             <div>
               <h2 className="text-xl font-bold mb-2">Personal Portfolio</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-white">
                 Explore my personal portfolio to see my projects and skills.
               </p>
               <a
@@ -80,11 +82,11 @@ const About = () => {
             </div>
           </div>
           {/* GitHub */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300">
-            <FaGithub className="text-4xl text-gray-900 mr-4" />
+          <div className="bg-white rounded-lg shadow-md p-6 flex items-center hover:scale-105 transition-transform duration-300 dark:bg-slate-600">
+            <FaGithub className="text-4xl text-gray-900 mr-4 dark:text-white" />
             <div>
               <h2 className="text-xl font-bold mb-2">GitHub</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-white">
                 Check out my GitHub repositories for more of my work.
               </p>
               <a
