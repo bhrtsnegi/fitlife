@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signin } from "./pages/Signin";
-import { About } from "./pages/About";
 import { Signup } from "./pages/Signup";
 import { Message } from "./pages/Message";
 import Dashboard from "./pages/Dashboard";
@@ -15,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Homepage from "./pages/Homepage";
 import Search from "./pages/Search";
 import Header from "./components/Header";
+import About from "./pages/About";
 
 const App = () => {
   return (
