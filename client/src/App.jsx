@@ -5,7 +5,6 @@ import { About } from "./pages/About";
 import { Signup } from "./pages/Signup";
 import { Message } from "./pages/Message";
 import Dashboard from "./pages/Dashboard";
-import { Header } from "./components/Header";
 import { FooterComp } from "./components/FooterComp";
 import PrivateRoute from "./components/PrivateRoute";
 import OnlyAdminPrivateRoute from "./components/OnlyAdminPrivateRoute";
@@ -15,6 +14,7 @@ import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Homepage from "./pages/Homepage";
 import Search from "./pages/Search";
+import Header from "./components/Header";
 
 const App = () => {
   return (
