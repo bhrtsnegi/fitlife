@@ -7,7 +7,7 @@ export default function CallToAction() {
         <h2 className="text-2xl">Want to Hire me?</h2>
         <p className="text-gray-500 my-2">Send me an email here.</p>
         <Button
-          gradientDuoTone="purpleToPink"
+          gradientDuoTone="greenToBlue"
           className="rounded-tl-xl rounded-bl-none"
         >
           <a
