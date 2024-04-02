@@ -7,6 +7,7 @@ import postRoutes from './route/post.route.js';
 import commentRoutes from './route/comment.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from "cors";
 
 dotenv.config();
 
@@ -25,6 +26,10 @@ const __dirname = path.resolve();
 
 const app = express();
 
+app.use(cors({
+  origin: 'https://fitlife-five.vercel.app/',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(cookieParser());
 
