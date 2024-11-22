@@ -56,7 +56,7 @@ It might take 50 second to load for the first time because it is hosted in free 
 
 ![Comment Section](https://github.com/bhrtsnegi/trial/blob/main/client/src/assets/images/sc/Screenshot%20from%202024-04-13%2011-33-45.png?raw=true)
 
-## Author
+## Author || Developer
 
 - [@bhrtsnegi](https://www.github.com/bhrtsnegi)
 
